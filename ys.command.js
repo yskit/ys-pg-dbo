@@ -1,5 +1,5 @@
 // 使用插件的json配置
-exports.use = '{ enable: true, package: \'ys-pg-dbo\' }';
+exports.use = '{ enable: true, package: \'ys-pg-dbo\', agent: \'agent\' }';
 // 插件通用配置
 exports.common = `[
   (() => {

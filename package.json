@@ -1,6 +1,6 @@
 {
   "name": "ys-pg-dbo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "application for ys-pg-dbo",
   "scripts": {
     "dev": "NODE_ENV=dev node index.js"
