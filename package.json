@@ -1,0 +1,20 @@
+{
+  "name": "ys-pg-dbo",
+  "version": "1.0.6",
+  "description": "application for ys-pg-dbo",
+  "scripts": {
+    "dev": "NODE_ENV=dev node index.js"
+  },
+  "plugin": {
+    "name": "dbo"
+  },
+  "dependencies": {
+    "ys-dbo": "^1.0.2",
+    "ys-dbo-mysql": "^1.0.2",
+    "ys-dbo-redis": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:yskit/ys-pg-dbo.git"
+  }
+}
