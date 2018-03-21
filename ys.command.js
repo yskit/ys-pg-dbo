@@ -13,7 +13,7 @@ exports.common = `[
     })
   })(),
   (() => {
-    const redis = require('ys-dbo-reids');
+    const redis = require('ys-dbo-redis');
     return new redis('redis', {
       host     : '',
       password : '',
