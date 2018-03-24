@@ -15,7 +15,7 @@ module.exports = async (app, configs) => {
         }
         return ctx => {
           ctx.status = !isNaN(err.code) ? Number(err.code) : 500;
-          ctx.body = app.env !== 'product' ? err.stacks : err.message;
+          ctx.body = app.env !== 'product' ? err.stack : err.message;
         }
       }
     }));
