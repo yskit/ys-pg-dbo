@@ -1,4 +1,5 @@
 const DBO = require('ys-dbo');
+const debug = require('debug')('pg-dbo:app');
 module.exports = async (app, configs) => {
   const dbo = new DBO(configs);
   
@@ -10,9 +11,7 @@ module.exports = async (app, configs) => {
     await dbo.connect();
     koa.use(dbo.way({
       error(err) {
-        if (app.env !== 'product') {
-          console.log(err);
-        }
+        debug(err);
         return ctx => {
           ctx.status = !isNaN(err.code) ? Number(err.code) : 500;
           ctx.body = app.env !== 'product' ? err.stack : err.message;

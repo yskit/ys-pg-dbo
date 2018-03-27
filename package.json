@@ -1,6 +1,6 @@
 {
   "name": "ys-pg-dbo",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "application for ys-pg-dbo",
   "scripts": {
     "dev": "NODE_ENV=dev node index.js"
@@ -9,6 +9,7 @@
     "name": "dbo"
   },
   "dependencies": {
+    "debug": "^3.1.0",
     "ys-dbo": "^1.0.2",
     "ys-dbo-mysql": "^1.0.2",
     "ys-dbo-redis": "^1.0.3"
