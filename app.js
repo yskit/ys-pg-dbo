@@ -12,6 +12,7 @@ module.exports = async (app, configs) => {
     koa.use(dbo.way({
       error(err) {
         debug(err);
+        app.console.error(err.stack);
         return ctx => {
           ctx.status = !isNaN(err.code) ? Number(err.code) : 500;
           ctx.body = app.env !== 'product' ? err.stack : err.message;
