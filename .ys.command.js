@@ -14,26 +14,26 @@ module.exports = class CommanderModule {
   }
 
   ['env:common']() {
-    return `[
-      (() => {
-        const mysql = require('ys-dbo-mysql');
-        return new mysql('mysql', {
+    return {
+      mysql: {
+        package: 'ys-dbo-mysql',
+        options: {
           host     : 'localhost',
           user     : 'me',
           password : 'secret',
           database : 'my_db',
           pool: true, // 是否使用pool
-        })
-      })(),
-      (() => {
-        const redis = require('ys-dbo-redis');
-        return new redis('redis', {
+        }
+      },
+      redis: {
+        package: 'ys-dbo-redis',
+        options: {
           host     : '',
           password : '',
           port     : 6379,
           keepAlive: 0
-        });
-      })()
-    ]`
+        }
+      }
+    }
   }
 }
